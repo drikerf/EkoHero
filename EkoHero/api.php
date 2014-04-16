@@ -42,6 +42,18 @@ function getGoogleData($origin,$destination) {
 	return array($response,$geoarr);
 }
 
+//CONVERT BETWEEN UNITS
+function unitConvert($co2) {
+	$co2 = intval($co2);
+	$units=array("ton"=>1000*1000,"kg"=>1000,"g"=>1);
+	foreach($units as $unitName=>$unit) {
+		if($co2 > $unit) {
+			return round($co2/$unit,2)." ".$unitName;
+		}
+	}
+	return $co2." g";
+}
+
 function getCo2Emissions($location) {
 	//COMMUTEGREENER API URL
 	$url="http://api.commutegreener.com/api/co2/emissions?startLat=[[STARTLAT]]&startLng=[[STARTLNG]]&endLat=[[ENDLAT]]&endLng=[[ENDLNG]]&format=json";
@@ -66,7 +78,7 @@ function getCo2Emissions($location) {
 			//Replace with real name (ts_modes)
 			$name=str_replace($modes,$ts_modes,$mode['transportName']);
 			$emission=$mode['totalCo2'];
-			$response[$name]=$emission;
+			$response[$name]=unitConvert($emission);
 		}
 	}
 
