@@ -19,10 +19,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <h1>
-                    <span class="glyphicon glyphicon-leaf logo"></span>
-                    EkoHero
-                </h1>
+                <a class="logo" href="/EkoHero">
+                    <h1>
+                        <span class="glyphicon glyphicon-leaf logo-leaf"></span>
+                        EkoHero
+                    </h1>
+                </a>
+                <!-- Start view -->
                 <div class="content" id="start">
                     <p class="lead notice">
                         Random text.
@@ -33,13 +36,80 @@
                             <span class="glyphicon glyphicon-map-marker"></span>
                         </span>
                         <input type="text" class="input-lg form-control"
-                        id="locationSearch">
+                        id="locationSearch" placeholder="Till">
                         </div>
-                        <button class="btn btn-lg btn-success btn-block">
+                        <button id="go" class="btn btn-lg btn-success btn-block">
                             Bli en #EkoHero
                         </button>
                     </form>
                 </div>
+                <!-- End start view -->
+                <!-- Result view -->
+                <div class="content" id="result">
+                    <div class="co2" id="drivingCO2">
+                    </div>
+                    <div class="co2" id="transitCO2">
+                    </div>
+                    <div class="co2" id="bicycleCO2">
+                    </div>
+                    <div class="co2" id="walkingCO2">
+                    </div>
+                    <table class="table details">
+                        <tr id="driving">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="transit">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="walking">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="bicycling">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div id="driving" class="row details">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <div id="transit" class="row details">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <div id="bicycling" class="row details">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <div id="walking" class="row details">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                </div>
+                <!-- End result view -->
                 <hr>
                 <span class="glyphicon glyphicon-heart"></span> 2014 EkoHero
             </div>

@@ -1,5 +1,7 @@
 // Onload.
 $(function() {
+    // Return click counter.
+    var clickCounter = 0;
     // Initialize autocomplete.
     initialize();
     // Focus.
@@ -10,14 +12,43 @@ $(function() {
         $('.notice').html('');
         $('.notice').html('Random text.')
         // On button click get data.
-        $('.btn').click(function() {
+        $('#go').on('click', function() {
+            // Clickcounter solves double return click bug.
+            clickCounter++;
+            if (clickCounter > 1) {
+                return false;
+            }
             // Get data.
             var destination = $('#locationSearch').val();
             var originCords = coords.lat + ',' + coords.lon;
             data = {origin: originCords, dest: destination}
             // Ajax get.
-            $.get('api.php', data, function(data) {
-                alert(data);
+            $.getJSON('api.php', data, function(data) {
+                console.log('api');
+                // Co2 id suffix.
+                var CO2_SUFFIX = 'CO2';
+                // Iterate modes.
+                $.each(data, function(key, value) {
+                    var idCO2 = '#' + key + CO2_SUFFIX;
+                    var id = '#' + key;
+                    // Populate CO2.
+                    var dispCO2 = '<h1>' + value['emission'] + '<span class="co2-unit">kg CO2</span></h1>';
+                    $(idCO2).html(dispCO2);
+                    // Populate details.
+                    var mode = id + ' td:nth-child(1)';
+                    var dur = id + ' td:nth-child(2)';
+                    var emi = id + ' td:nth-child(3)';
+                    var icon = '<span class="glyphicon ' + value['icon'] + '"></span>'
+                    $(mode).html(icon);
+                    $(dur).html(value['duration']);
+                    $(emi).html(value['emission']);
+                });
+                // Hide start view.
+                $('#start').hide();
+                // Show result.
+                $('#result').show();
+                $('#drivingCO2').show();
+                $('').show();
             });
             return false;
         });

@@ -11,15 +11,50 @@ body {
 }
 
 /* Logo. */
-.logo {
+.logo-leaf {
     font-size: 1em;
     color: #5cb85c;
+}
+
+.logo {
+    color: #fff;
+}
+
+.logo:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Form margin */
 .input-group {
     margin-bottom: 0.5em;
 }
+
+/* Result View. */
+#result {
+    display: none;
+}
+
+/* Co2 display. */
+.co2 h1 {
+    font-size: 8em;
+}
+
+/* Hide all Co2. */
+.co2 {
+    display: none;
+}
+
+.co2-unit {
+    font-size: 8px;
+}
+
+/* Details. */
+.details {
+    background: rgba(0,0,0, 0.2);
+    text-align: left;
+}
+
 
 /* Remove rounded corners. */
 * {
