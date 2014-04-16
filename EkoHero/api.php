@@ -33,12 +33,12 @@ function getGoogleData($origin,$destination) {
 		$response[$mode]['distance']=$g_data['distance']['text'];
 		$response[$mode]['duration']=$g_data['duration']['text'];
 	}
-
-	return $response;
+	// RETURN JSON RESPONSE.
+	return json_encode($response);
 }
 
 
-
+// TODO: GET GEO CORDINATES FROM REQUEST.
 
 print_r(getGoogleData("Birger Jarlsgatan 46","Uddgränd 5"));
 
