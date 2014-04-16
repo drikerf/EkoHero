@@ -1,5 +1,29 @@
-
-/* Align center */
+/* Body. */
 body {
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     text-align: center;
+    color: #fff;
+    padding-top: 20vh
+}
+
+/* Logo. */
+.logo {
+    font-size: 1em;
+    color: #5cb85c;
+}
+
+/* Form margin */
+.input-group {
+    margin-bottom: 0.5em;
+}
+
+/* Remove rounded corners. */
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
 }
