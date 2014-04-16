@@ -45,13 +45,15 @@ function getGoogleData($origin,$destination) {
 //CONVERT BETWEEN UNITS
 function unitConvert($co2) {
 	$co2 = intval($co2);
+	return round($co2/1000,2)." kg";
+/* DEPRECATED 
 	$units=array("ton"=>1000*1000,"kg"=>1000,"g"=>1);
 	foreach($units as $unitName=>$unit) {
 		if($co2 > $unit) {
 			return round($co2/$unit,2)." ".$unitName;
 		}
 	}
-	return $co2." g";
+	return $co2." g";*/
 }
 
 function getCo2Emissions($location) {
