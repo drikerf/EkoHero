@@ -60,7 +60,7 @@ function translateTime($time) {
 //CONVERT BETWEEN UNITS
 function unitConvert($co2) {
 	$co2 = intval($co2);
-	return round($co2/1000,2)." kg";
+	return round($co2/1000,2);
 /* DEPRECATED 
 	$units=array("ton"=>1000*1000,"kg"=>1000,"g"=>1);
 	foreach($units as $unitName=>$unit) {
