@@ -34,7 +34,7 @@ function getGoogleData($origin,$destination) {
 		$response[$mode]['duration']=$g_data['duration']['text'];
 	}
 
-	return $response;
+	return json_encode($response);
 }
 
 
