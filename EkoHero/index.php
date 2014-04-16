@@ -15,7 +15,7 @@
 
     </script>
 </head>
-<body onload="initialize()">
+<body>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -23,21 +23,23 @@
                     <span class="glyphicon glyphicon-leaf logo"></span>
                     EkoHero
                 </h1>
-                <p class="lead">
-                    djsaijdasndla
-                </p>
-                <form class="form-horizontal">
-                    <div class="input-group">
-                    <span class="input-group-addon ">
-                        <span class="glyphicon glyphicon-map-marker"></span>
-                    </span>
-                    <input type="text" class="input-lg form-control"
-                    id="locationSearch">
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-success btn-block">
-                        Bli en #EkoHero
-                    </button>
-                </form>
+                <div class="content" id="start">
+                    <p class="lead notice">
+                        Random text.
+                    </p>
+                    <form class="form-horizontal">
+                        <div class="input-group">
+                        <span class="input-group-addon ">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </span>
+                        <input type="text" class="input-lg form-control"
+                        id="locationSearch">
+                        </div>
+                        <button class="btn btn-lg btn-success btn-block">
+                            Bli en #EkoHero
+                        </button>
+                    </form>
+                </div>
                 <hr>
                 <span class="glyphicon glyphicon-heart"></span> 2014 EkoHero
             </div>
