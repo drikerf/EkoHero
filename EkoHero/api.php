@@ -12,7 +12,7 @@ function getGoogleData($origin,$destination) {
 	$origin=urlencode($origin);
 	$destination=urlencode($destination);
 
-	//GOOGLE DISTANCE MATRIX API URL WITH ORIGIN DESTINATION AND CURRENT TIME
+	//GOOGLE DIRECTIONS API URL WITH ORIGIN DESTINATION AND CURRENT TIME
 	$google_api_url = "https://maps.googleapis.com/maps/api/directions/json?origin={$origin}&destination={$destination}&sensor=false&mode=[[MODE]]&key=AIzaSyA3ouuEPSaJt5mrn7zh6FD0aVjxjAQxmeQ&departure_time=".(time()+10*60);
 
 	//RESPONSE ARRAY
@@ -26,7 +26,7 @@ function getGoogleData($origin,$destination) {
 		$url = str_replace("[[MODE]]",$mode,$google_api_url);
 		//GET DATA FROM GOOGLE
 		$g_data = json_decode(file_get_contents($url),true);
-		//PARSE*
+		//PARSE
 		$g_data = $g_data['routes'][0]['legs'][0];
 		//ADD TO RESPONSE
 		$response[$mode]=array();
