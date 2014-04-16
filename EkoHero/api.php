@@ -33,7 +33,7 @@ function getGoogleData($origin,$destination) {
 		//ADD TO RESPONSE
 		$response[$mode]=array();
 		$response[$mode]['distance']=$g_data['distance']['text'];
-		$response[$mode]['duration']=$g_data['duration']['text'];
+		$response[$mode]['duration']=translateTime($g_data['duration']['text']);
 
 		//ADD GEO CODES
 		$geoarr['end_location']=$g_data['end_location'];
@@ -41,6 +41,21 @@ function getGoogleData($origin,$destination) {
 	}
 	return array($response,$geoarr);
 }
+
+//GET MODE ICON
+function getIcon($mode) {
+	$modes=array("driving","walking","bicycling","transit");
+	$icons=array("glyphicon-road","glyphicon-user","glyphicon-picture","glyphicon-briefcase");
+	return str_replace($modes,$icons,$mode);
+}
+
+//TRANSLATE TIME
+function translateTime($time) {
+	$eng=array("hours","hour","mins","min");
+	$swe=array("t","t","min","min");
+	return str_replace($eng,$swe,$time);
+}
+
 
 //CONVERT BETWEEN UNITS
 function unitConvert($co2) {
@@ -94,7 +109,10 @@ function generateJSONresponse($origin,$dest) {
 	$emissions = getCo2Emissions($g_data[1]);
 
 	foreach($g_data[0] as $key=>$data) {
+		//ADD EMISSIONS
 		$g_data[0][$key]['emission'] = $emissions[$key];
+		//ADD ICON
+		$g_data[0][$key]['icon'] = getIcon($key);
 	}
 	return json_encode($g_data[0]);
 }
