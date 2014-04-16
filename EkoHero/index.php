@@ -28,7 +28,7 @@
                 <!-- Start view -->
                 <div class="content" id="start">
                     <p class="lead notice">
-                        Random text.
+                        Knappa in din destination och bli en #EkoHero
                     </p>
                     <form class="form-horizontal">
                         <div class="input-group">
@@ -36,9 +36,9 @@
                             <span class="glyphicon glyphicon-map-marker"></span>
                         </span>
                         <input type="text" class="input-lg form-control"
-                        id="locationSearch" placeholder="Till">
+                        id="locationSearch" placeholder="Ange destination" disabled>
                         </div>
-                        <button id="go" class="btn btn-lg btn-success btn-block">
+                        <button id="go" class="btn btn-lg btn-success btn-block" disabled>
                             Bli en #EkoHero
                         </button>
                     </form>

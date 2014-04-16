@@ -45,8 +45,9 @@ body {
     display: none;
 }
 
+/* KgCO2 Unit display. */
 .co2-unit {
-    font-size: 8px;
+    font-size: 18px;
 }
 
 /* Details. */

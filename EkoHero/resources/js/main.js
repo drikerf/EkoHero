@@ -8,9 +8,11 @@ $(function() {
     $('#locationSearch').focus();
     // Geolocate user.
     geoLocate(function(coords) {
+        // Remove disabled.
+        $('#locationSearch').removeAttr('disabled');
+        $('#go').removeAttr('disabled');
         // Remove loading.
-        $('.notice').html('');
-        $('.notice').html('Random text.')
+        $('.notice').html('Knappa in din destination och bli en #EkoHero');
         // On button click get data.
         $('#go').on('click', function() {
             // Clickcounter solves double return click bug.
@@ -66,7 +68,7 @@ function geoLocate(callback) {
     // Get geolocation
     if (navigator.geolocation) {
         // Print loading.
-        $('.notice').html('Laddar din plats');
+        $('.notice').html('Laddar din plats ...');
         navigator.geolocation.getCurrentPosition(function (position) {
             var coords = {'lat': position.coords.latitude,
                 'lon': position.coords.longitude};
