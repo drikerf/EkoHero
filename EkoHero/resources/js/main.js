@@ -1,7 +1,5 @@
 // Onload.
 $(function() {
-    // Return click counter.
-    var clickCounter = 0;
     // Initialize autocomplete.
     initialize();
     // Focus.
@@ -15,11 +13,12 @@ $(function() {
         $('.notice').html('Knappa in din destination och bli en #EkoHero');
         // On button click get data.
         $('#go').on('click', function() {
-            // Clickcounter solves double return click bug.
-            clickCounter++;
-            if (clickCounter > 1) {
+            // Empty?
+            if ($('#locationSearch').val() == '') {
                 return false;
             }
+            // Disable button.
+            $('#go').attr('disabled','');
             // Get data.
             var destination = $('#locationSearch').val();
             var originCords = coords.lat + ',' + coords.lon;
@@ -33,6 +32,8 @@ $(function() {
                 $.each(data, function(key, value) {
                     var idCO2 = '#' + key + CO2_SUFFIX;
                     var id = '#' + key;
+                    // Icon.
+                    var icon = '<span class="glyphicon ' + value['icon'] + '"></span>';
                     // Populate CO2.
                     var dispCO2 = '<h1>' + value['emission'] + '<span class="co2-unit">kg CO2</span></h1>';
                     $(idCO2).html(dispCO2);
@@ -40,7 +41,6 @@ $(function() {
                     var mode = id + ' td:nth-child(1)';
                     var dur = id + ' td:nth-child(2)';
                     var emi = id + ' td:nth-child(3)';
-                    var icon = '<span class="glyphicon ' + value['icon'] + '"></span>'
                     $(mode).html(icon);
                     $(dur).html(value['duration']);
                     $(emi).html(value['emission']);
@@ -54,6 +54,29 @@ $(function() {
             });
             return false;
         });
+    });
+
+    // Result events.
+    $('tr').on('click', function() {
+        // Get old CO2 display id.
+        var oldId = $('.current-view').attr('id');
+        oldId = '#' + oldId + 'CO2';
+        // Remove current view from all tr.
+        $('tr').removeClass('current-view');
+        $('tr').removeClass('green')
+        // Set current-view on clicked tr.
+        $(this).addClass('current-view');
+        // Get new display CO2 id.
+        var newId = $(this).attr('id');
+        var newId = '#' + newId + 'CO2';
+        // If Walk or bike set green.
+        if (newId == '#walkingCO2' || newId == '#bicyclingCO2') {
+            $(newId).addClass('co2-green');
+            $(this).addClass('green');
+        }
+        // Hide old and display new CO2.
+        $(oldId).hide();
+        $(newId).show();
     });
 });
 

@@ -25,9 +25,24 @@ body {
     text-decoration: none;
 }
 
+/* Back btn. */
+.back-btn {
+    color: #fff;
+}
+
+.back-btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Form margin */
 .input-group {
     margin-bottom: 0.5em;
+}
+
+/* CO2 Active. */
+.current-view {
+    background-color: #f42e2d !important;
 }
 
 /* Result View. */
@@ -38,6 +53,7 @@ body {
 /* Co2 display. */
 .co2 h1 {
     font-size: 8em;
+    color: #f42e2d;
 }
 
 /* Hide all Co2. */
@@ -48,8 +64,18 @@ body {
 /* KgCO2 Unit display. */
 .co2-unit {
     font-size: 18px;
+    color: #fff;
 }
 
+/* Green CO2. */
+.co2-green h1 {
+    color: #5cb85c;
+}
+
+/* Green bg. */
+.green {
+    background-color: #5cb85c !important;
+}
 /* Details. */
 .details {
     background: rgba(0,0,0, 0.2);
@@ -62,4 +88,11 @@ body {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .back-btn {
+        visibility: hidden;
+    }
 }
