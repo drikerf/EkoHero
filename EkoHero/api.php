@@ -17,6 +17,8 @@ function getGoogleData($origin,$destination) {
 
 	//RESPONSE ARRAY
 	$response=array();
+	//GEO CODES ARRAY
+	$geoarr=array();
 
 	//MODES
 	$modes=array("driving","walking","bicycling","transit");
@@ -32,14 +34,65 @@ function getGoogleData($origin,$destination) {
 		$response[$mode]=array();
 		$response[$mode]['distance']=$g_data['distance']['text'];
 		$response[$mode]['duration']=$g_data['duration']['text'];
+
+		//ADD GEO CODES
+		$geoarr['end_location']=$g_data['end_location'];
+		$geoarr['start_location']=$g_data['start_location'];
 	}
-	// RETURN JSON RESPONSE.
-	return json_encode($response);
+	return array($response,$geoarr);
+}
+
+function getCo2Emissions($location) {
+	//COMMUTEGREENER API URL
+	$url="http://api.commutegreener.com/api/co2/emissions?startLat=[[STARTLAT]]&startLng=[[STARTLNG]]&endLat=[[ENDLAT]]&endLng=[[ENDLNG]]&format=json";
+	//INSERT PARAMS
+	$url=str_replace("[[STARTLAT]]",$location['start_location']['lat'],$url);
+	$url=str_replace("[[STARTLNG]]",$location['start_location']['lng'],$url);
+	$url=str_replace("[[ENDLAT]]",$location['end_location']['lat'],$url);
+	$url=str_replace("[[ENDLNG]]",$location['end_location']['lng'],$url);
+
+	//GET DATA
+	$data = json_decode(file_get_contents($url),true);
+	$data = $data['emissions'];
+
+	//PARSE DATA (DO NOT CHANGE ORDER)
+	$modes=array("Bicycle","Walking","Bus","Car, medium");
+	$ts_modes=array("bicycling","walking","transit","driving"); //TRANSLATION
+
+	$response=array();
+	foreach($data as $mode) {
+		//MODE WE ARE LOOKING FOR?
+		if(in_array($mode['transportName'],$modes)) {
+			//Replace with real name (ts_modes)
+			$name=str_replace($modes,$ts_modes,$mode['transportName']);
+			$emission=$mode['totalCo2'];
+			$response[$name]=$emission;
+		}
+	}
+
+	return $response;
+}
+
+function generateJSONresponse($origin,$dest) {
+	//GET GOOGLE DATA [0]-modes, [1]-coords
+	$g_data = getGoogleData($origin,$dest);
+	//GET EMISSIONS
+	$emissions = getCo2Emissions($g_data[1]);
+
+	foreach($g_data[0] as $key=>$data) {
+		$g_data[0][$key]['emission'] = $emissions[$key];
+	}
+	return json_encode($g_data[0]);
 }
 
 
-// TODO: GET GEO CORDINATES FROM REQUEST.
-
-print_r(getGoogleData("Birger Jarlsgatan 46","Uddgränd 5"));
+//GET REQS
+/*PARAMETERS:
+origin - start coords or start address
+dest - end coors or end address
+*/
+if(!empty($_GET['origin']) && !empty($_GET['dest'])) {
+	echo generateJSONresponse($_GET['origin'],$_GET['dest']);
+}
 
 ?>
