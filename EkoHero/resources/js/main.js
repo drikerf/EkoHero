@@ -1,5 +1,7 @@
 // Onload.
 $(function() {
+    //Set random background.
+    randomBackground();
     // Initialize autocomplete.
     initialize();
     // Focus.
@@ -101,4 +103,12 @@ function geoLocate(callback) {
     } else {
         $('body').append('Geolocation is not supported');
     }
+}
+
+//Random Background
+function randomBackground() {
+	var images = ['bg.jpg','mountain_ocean.jpg'];
+	var bg = images[Math.floor(Math.random() * images.length)];
+	console.log(bg);
+	$('body').css({'background-image' : 'url("resources/img/'+bg+'")'});
 }
