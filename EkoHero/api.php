@@ -4,7 +4,7 @@ EkoHero API v.0.1
 Copyright (c) EkoHero 2014
 
 Get C02 Emissions For DRIVING, TRANSIT, BICYCLING OR WALKING
-BETWEEN TWO PLACES
+between two places
 */
 
 function getGoogleData($origin,$destination) {
@@ -28,8 +28,17 @@ function getGoogleData($origin,$destination) {
 		$url = str_replace("[[MODE]]",$mode,$google_api_url);
 		//GET DATA FROM GOOGLE
 		$g_data = json_decode(file_get_contents($url),true);
+
+		//CHECK FOR ERRORS
+		if($g_data['status'] != "OK") {
+			//SET status : FAIL
+			die(json_encode(Array("status" => "FAIL")));
+		}
+		//END ERRORS
+
 		//PARSE
 		$g_data = $g_data['routes'][0]['legs'][0];
+
 		//ADD TO RESPONSE
 		$response[$mode]=array();
 		$response[$mode]['distance']=$g_data['distance']['text'];
@@ -51,8 +60,8 @@ function getIcon($mode) {
 
 //TRANSLATE TIME
 function translateTime($time) {
-	$eng=array("hours","hour","mins","min");
-	$swe=array("t","t","min","min");
+	$eng=array("days","day","hours","hour","mins","min");
+	$swe=array("d","d","t","t","min","min");
 	return str_replace($eng,$swe,$time);
 }
 
@@ -114,6 +123,10 @@ function generateJSONresponse($origin,$dest) {
 		//ADD ICON
 		$g_data[0][$key]['icon'] = getIcon($key);
 	}
+
+	//ADD STATUS OK
+	$g_data[0]['status'] = "OK";
+
 	return json_encode($g_data[0]);
 }
 

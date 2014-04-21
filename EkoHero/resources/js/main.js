@@ -32,6 +32,7 @@ $(function() {
                 var CO2_SUFFIX = 'CO2';
                 // Iterate modes.
                 $.each(data, function(key, value) {
+			console.log(key);
                     var idCO2 = '#' + key + CO2_SUFFIX;
                     var id = '#' + key;
                     // Icon.
@@ -107,8 +108,10 @@ function geoLocate(callback) {
 
 //Random Background
 function randomBackground() {
+	// Backgrounds
 	var images = ['bg.jpg','mountain_ocean.jpg'];
+	// Choose random bg
 	var bg = images[Math.floor(Math.random() * images.length)];
-	console.log(bg);
+	// Set background
 	$('body').css({'background-image' : 'url("resources/img/'+bg+'")'});
 }
