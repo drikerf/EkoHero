@@ -12,7 +12,7 @@ function convertCarbon($type, $co2){
 
 function randomType($co2){
 	// Get the data
-	$data = file_get_contents("http://carbon.to/all.json?".$co2);
+	$data = file_get_contents("http://carbon.to/all.json?co2=".$co2);
 	// Decode the data
 	$data = json_decode($data, true);
 	// Get a random key
