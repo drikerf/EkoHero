@@ -47,8 +47,33 @@ function getGoogleData($origin,$destination) {
 		//ADD GEO CODES
 		$geoarr['end_location']=$g_data['end_location'];
 		$geoarr['start_location']=$g_data['start_location'];
+
+		//ADD GOOGLE LINK
+		$response[$mode]['googlelink'] = getGoogleLink($mode,$geoarr);
 	}
 	return array($response,$geoarr);
+}
+
+//GENERATE GOOGLE MAPS LINK
+function getGoogleLink($mode,$geoarr) {
+	//URL CODES FOR MODES
+	$modes_url = Array(
+	"driving" => "c",
+	"walking" => "w",
+	"bicycling" => "b",
+	"transit" => "t");
+
+	//GOOGLE LINK
+	$link = "https://maps.google.com/maps?saddr=[[STARTLAT]]%2C[[STARTLNG]]&daddr=[[ENDLAT]]%2C[[ENDLNG]]&dirflg=[[MODE]]";
+
+	//SET VALUES
+	$link = str_replace("[[STARTLAT]]",$geoarr['start_location']['lat'],$link);
+	$link = str_replace("[[STARTLNG]]",$geoarr['start_location']['lng'],$link);
+	$link = str_replace("[[ENDLAT]]",$geoarr['end_location']['lat'],$link);
+	$link = str_replace("[[ENDLNG]]",$geoarr['end_location']['lng'],$link);
+	$link = str_replace("[[MODE]]",$modes_url[$mode],$link);
+
+	return $link;
 }
 
 //GET MODE ICON
