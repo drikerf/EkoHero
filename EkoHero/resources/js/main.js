@@ -36,7 +36,7 @@ $(function() {
                     var idCO2 = '#' + key + CO2_SUFFIX;
                     var id = '#' + key;
                     // Icon.
-                    var icon = '<span class="glyphicon ' + value['icon'] + '"></span>';
+                    var icon = '<span class="ls-icon-large ' + value['icon'] + '"></span>';
                     // Populate CO2.
                     var dispCO2 = '<h1>' + value['emission'] + '<span class="co2-unit">kg CO2</span></h1>';
                     $(idCO2).html(dispCO2);

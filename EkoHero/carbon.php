@@ -43,6 +43,6 @@ function translateUnit($unit){
 	return str_replace($dataEnglish, $dataSwedish, $unit);
 }
 
-echo convertCarbon($_GET['type'], $_GET['co2']);
+//echo convertCarbon($_GET['type'], $_GET['co2']);
 echo randomType($_GET['co2']);
 ?>

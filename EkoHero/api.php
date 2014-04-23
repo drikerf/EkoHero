@@ -54,7 +54,7 @@ function getGoogleData($origin,$destination) {
 //GET MODE ICON
 function getIcon($mode) {
 	$modes=array("driving","walking","bicycling","transit");
-	$icons=array("glyphicon-road","glyphicon-user","glyphicon-picture","glyphicon-briefcase");
+	$icons=array("ls-icon-car","ls-icon-walking","ls-icon-bicycle","ls-icon-bus");
 	return str_replace($modes,$icons,$mode);
 }
 
