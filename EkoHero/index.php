@@ -29,12 +29,12 @@
             <div class="col-sm-6 col-sm-offset-3">
                 <div class="row">
                     <div class="col-sm-1 back-btn">
-                        <a class="back-btn" href="/EkoHero">
+                        <a class="back-btn" href="/">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </a>
                     </div>
                     <div class="col-sm-7 col-sm-offset-1">
-                        <a class="logo" href="/EkoHero">
+                        <a class="logo" href="/">
                             <h1>
                                 <span class="glyphicon glyphicon-leaf logo-leaf"></span>
                                 EkoHero
