@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>EkoHero</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" href="favicon.ico">
     <!-- for Google -->
     <meta name="description" content="Bli en EkoHero, Gå istället" />
@@ -96,8 +96,10 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                             </tr>
                             <tr id="transit">
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -106,8 +108,10 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                             </tr>
                             <tr id="bicycling">
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -119,7 +123,7 @@
                         <button
                         class="btn btn-lg btn-block btn-social btn-twitter">
                         <i class="fa fa-twitter"></i> Dela på Twitter
-                        #EkoHero</button>
+                        </button>
                     </div>
                 </div>
                 <!-- End result view -->
