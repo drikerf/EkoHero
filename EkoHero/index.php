@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>EkoHero</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="favicon.ico">
     <!-- for Google -->
     <meta name="description" content="Bli en EkoHero, Gå istället" />
     <meta name="keywords" content="eko, hållbarhet, ekologisk, miljö" />
@@ -18,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="" /> <!-- TODO -->
     <meta property="og:url" content="http://ekohero.se" />
-    <meta property="og:description" content="Bli en EkoHero, Gå istället" />
+    <meta property="og:description" content="Jag är en EkoHero, Bli en du med. #EkoHero" />
 
     <!-- for Twitter -->
     <meta name="twitter:card" content="summary" />
@@ -47,14 +48,6 @@
     </script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -103,8 +96,10 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                             </tr>
                             <tr id="transit">
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -113,25 +108,22 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                             </tr>
                             <tr id="bicycling">
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
                             </tr>
                         </table>
-                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
-                        <i class="fa fa-facebook"></i> Dela på Facebook
-                        </div>
-                        <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
-                        class="btn btn-lg btn-block btn-social btn-twitter" data-size="large" data-url="http://www.ekohero.se" data-text="Jag är en Ekohero, Bli en du med: ">
+                        <button class="btn btn-lg btn-block btn-social btn-facebook">
+                            <i class="fa fa-facebook"></i> Dela på Facebook
+                        </button>
+                        <button
+                        class="btn btn-lg btn-block btn-social btn-twitter">
                         <i class="fa fa-twitter"></i> Dela på Twitter
-                        #EkoHero</a>
-                        <script>
-                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-                            fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                        </script>
+                        </button>
                     </div>
                 </div>
                 <!-- End result view -->

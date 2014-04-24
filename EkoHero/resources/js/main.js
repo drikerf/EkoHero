@@ -1,5 +1,14 @@
 // Onload.
 $(function() {
+    // Twitter popup.
+    $('.btn-twitter').on('click', function() {
+        window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=Jag%20%C3%A4r%20en%20EkoHero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
+        return false;
+    });
+    // Facebook popup.
+    $('.btn-facebook').on('click', function() {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fekohero.se', '_blank', 'width=500, height=500');
+    });
     //Set random background.
     randomBackground();
     // Initialize autocomplete.
@@ -32,21 +41,26 @@ $(function() {
                 var CO2_SUFFIX = 'CO2';
                 // Iterate modes.
                 $.each(data, function(key, value) {
-			console.log(key);
+			        console.log(key);
+                    console.log(value['googlelink']);
                     var idCO2 = '#' + key + CO2_SUFFIX;
                     var id = '#' + key;
                     // Icon.
                     var icon = '<span class="ls-icon-large ' + value['icon'] + '"></span>';
                     // Populate CO2.
-                    var dispCO2 = '<h1>' + value['emission'] + '<span class="co2-unit">kg CO2</span></h1>';
+                    var dispCO2 = '<h1>' + value['altemission'][0] + '<span class="co2-unit">' + value['altemission'][1] + '</span></h1>';
                     $(idCO2).html(dispCO2);
+                    // Map link.
+                    var mapLink = '<a class="map-icon" href="' + value['googlelink'] + '" target="_blank"><span class="ls-icon-large ls-icon-map"></span></a>';
                     // Populate details.
                     var mode = id + ' td:nth-child(1)';
                     var dur = id + ' td:nth-child(2)';
                     var emi = id + ' td:nth-child(3)';
+                    var map = id + ' td:nth-child(4)';
                     $(mode).html(icon);
                     $(dur).html(value['duration']);
                     $(emi).html(value['emission']);
+                    $(map).html(mapLink);
                 });
                 // Hide start view.
                 $('#start').hide();
