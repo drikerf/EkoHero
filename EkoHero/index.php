@@ -5,8 +5,30 @@
     <title>EkoHero</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for Google -->
+    <meta name="description" content="Bli en EkoHero, Gå istället" />
+    <meta name="keywords" content="Eko, hållbarhet, ekologisk, miljö" />
+
+    <meta name="author" content="EkoHero" />
+    <meta name="copyright" content="EkoHero" />
+    <meta name="application-name" content="EkoHero" />
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="EkoHero" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" /> <!-- TODO -->
+    <meta property="og:url" content="http://ekohero.se" />
+    <meta property="og:description" content="Bli en EkoHero, Gå istället" />
+
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/ligature-symbols.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-social.css" rel="stylesheet">
     <link href="resources/css/main.css" rel="stylesheet">
     <script src="resources/js/jquery.min.js" type="text/javascript"></script>
     <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
@@ -90,6 +112,15 @@
                                 <td></td>
                             </tr>
                         </table>
+                        <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
+                        class="btn btn-lg btn-block btn-social btn-twitter" data-size="large" data-url="http://www.ekohero.se" data-text="Jag är en Ekohero, Bli en du med: ">
+                        <i class="fa fa-twitter"></i> Dela på Twitter
+                        #EkoHero</a>
+                        <script>
+                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                        </script>
                     </div>
                 </div>
                 <!-- End result view -->
