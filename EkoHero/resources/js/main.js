@@ -7,7 +7,7 @@ $(function() {
     });
     // Facebook popup.
     $('.btn-facebook').on('click', function() {
-        window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com', '_blank', 'width=500, height=500');
+        window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fekohero.se', '_blank', 'width=500, height=500');
     });
     //Set random background.
     randomBackground();
