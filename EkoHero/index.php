@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="" /> <!-- TODO -->
     <meta property="og:url" content="http://ekohero.se" />
-    <meta property="og:description" content="Bli en EkoHero, Gå istället" />
+    <meta property="og:description" content="Jag är en Ekohero, Bli en du med. #EkoHero" />
 
     <!-- for Twitter -->
     <meta name="twitter:card" content="summary" />
