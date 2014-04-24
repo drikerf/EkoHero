@@ -120,6 +120,9 @@
                                 <td></td>
                             </tr>
                         </table>
+                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true"> 
+                        <i class="fa fa-facebook"></i> Dela på Facebook
+                        </div>
                         <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
                         class="btn btn-lg btn-block btn-social btn-twitter" data-size="large" data-url="http://www.ekohero.se" data-text="Jag är en Ekohero, Bli en du med: ">
                         <i class="fa fa-twitter"></i> Dela på Twitter
