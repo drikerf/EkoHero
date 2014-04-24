@@ -15,14 +15,17 @@ function randomType($co2){
 	$data = file_get_contents("http://carbon.to/all.json?co2=".$co2);
 	// Decode the data
 	$data = json_decode($data, true);
+	// Remove last element in array
+	unset($data[count($data)-1]);
 	// Get a random key
 	$randomKey = array_rand($data);
-	// Amount
+	// Amount for random type
 	$amount = $data[$randomKey]['conversion']['amount'];
 	// Random type
 	$randomType = $data[$randomKey]['conversion']['unit'];
 	// Return the amount and random item
-	return $amount." ".translateUnit($randomType);
+	$response = array('text' => $amount." ".translateUnit($randomType));
+	return json_encode($response);
 }
 
 function translateUnit($unit){
