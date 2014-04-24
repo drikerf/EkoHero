@@ -5,6 +5,7 @@
     <title>EkoHero</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
     <!-- for Google -->
     <meta name="description" content="Bli en EkoHero, Gå istället" />
     <meta name="keywords" content="eko, hållbarhet, ekologisk, miljö" />
