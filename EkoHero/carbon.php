@@ -16,7 +16,7 @@ function randomCarbon(){
 	// Decode the data
 	$data = json_decode($data, true);
 	
-	return $data[randomKey()];
+	return $data[randomKey()]['conversion'];
 }
 
 function randomKey(){

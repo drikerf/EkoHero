@@ -142,6 +142,8 @@ function generateJSONresponse($origin,$dest) {
 	$g_data = getGoogleData($origin,$dest);
 	//GET EMISSIONS
 	$emissions = getCo2Emissions($g_data[1]);
+	//GET ALT.EMISSIONS
+	$altemission = randomCarbon();
 
 	foreach($g_data[0] as $key=>$data) {
 		//ADD EMISSIONS
@@ -149,7 +151,8 @@ function generateJSONresponse($origin,$dest) {
 		//ADD ICON
 		$g_data[0][$key]['icon'] = getIcon($key);
 		//ADD LAT EMISSION
-		$g_data[0][$key]['altemission'] = randomType($emissions[$key]);
+		$g_data[0][$key]['altemission']['amount'] = round($emissions[$key]/$altemission['carbon']);
+		$g_data[0][$key]['altemission']['unit'] = translateUnit($altemission['unit']);
 	}
 
 	//ADD STATUS OK
