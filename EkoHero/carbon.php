@@ -10,23 +10,24 @@ function convertCarbon($type, $co2){
 	return $data['conversion']['amount'];
 }
 
-function randomType($co2){
+function randomCarbon(){
 	// Get the data
-	$data = file_get_contents("http://carbon.to/all.json?co2=".$co2);
+	$data = file_get_contents("http://carbon.to/all.json");
 	// Decode the data
 	$data = json_decode($data, true);
-	// Remove elements 
-	unset($data[count($data)-1]);
+	
+	return $data[randomKey()];
+}
+
+function randomKey(){
+	$keys = array(
+		'apples' => 1,
+		'carrots' => 7,
+		'rice' => 18,
+		'beers' => 22);
 	// Get a random key
-	$randomKey = array_rand(array(0, 1, 2, 7, 11, 12, 13, 18, 20, 22));
-	// Amount for random type
-	$amount = $data[$randomKey]['conversion']['amount'];
-	// Random type
-	$randomType = $data[$randomKey]['conversion']['unit'];
-	// Return the amount and random item
-	$response = array('amount' => $amount, 
-			'unit' => translateUnit($randomType));
-	return $response;
+	$randomKey = array_rand($keys);
+	return $keys[$randomKey];
 }
 
 function translateUnit($unit){
