@@ -2,7 +2,7 @@
 $(function() {
     // Twitter popup.
     $('.btn-twitter').on('click', function() {
-        window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=Jag%20%C3%A4r%20en%20Ekohero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
+        window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=Jag%20%C3%A4r%20en%20EkoHero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
         return false;
     });
     // Facebook popup.
