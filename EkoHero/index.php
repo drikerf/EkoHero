@@ -5,8 +5,30 @@
     <title>EkoHero</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for Google -->
+    <meta name="description" content="Bli en EkoHero, Gå istället" />
+    <meta name="keywords" content="eko, hållbarhet, ekologisk, miljö" />
+
+    <meta name="author" content="EkoHero" />
+    <meta name="copyright" content="EkoHero" />
+    <meta name="application-name" content="EkoHero" />
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="EkoHero" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" /> <!-- TODO -->
+    <meta property="og:url" content="http://ekohero.se" />
+    <meta property="og:description" content="Bli en EkoHero, Gå istället" />
+
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="EkoHero" />
+    <meta name="twitter:description" content="Bli en EkoHero, Gå istället" />
+    <meta name="twitter:image" content="" /> <!-- TODO -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/ligature-symbols.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-social.css" rel="stylesheet">
     <link href="resources/css/main.css" rel="stylesheet">
     <script src="resources/js/jquery.min.js" type="text/javascript"></script>
     <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
@@ -25,11 +47,19 @@
     </script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <div class="row">
-                    <div class="col-sm-7 col-sm-offset-2">
+                    <div class="col-sm-9 col-sm-offset-1">
                         <a class="logo" href="/">
                             <h1>
                                 <span class="glyphicon glyphicon-leaf logo-leaf"></span>
@@ -68,7 +98,7 @@
                         </div>
                         <div class="co2" id="walkingCO2">
                         </div>
-                        <table class="table details">
+                        <table class="table details lead">
                             <tr class="current-view" id="driving">
                                 <td></td>
                                 <td></td>
@@ -90,6 +120,18 @@
                                 <td></td>
                             </tr>
                         </table>
+                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
+                        <i class="fa fa-facebook"></i> Dela på Facebook
+                        </div>
+                        <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
+                        class="btn btn-lg btn-block btn-social btn-twitter" data-size="large" data-url="http://www.ekohero.se" data-text="Jag är en Ekohero, Bli en du med: ">
+                        <i class="fa fa-twitter"></i> Dela på Twitter
+                        #EkoHero</a>
+                        <script>
+                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                        </script>
                     </div>
                 </div>
                 <!-- End result view -->
