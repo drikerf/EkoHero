@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- for Google -->
     <meta name="description" content="Bli en EkoHero, Gå istället" />
-    <meta name="keywords" content="Eko, hållbarhet, ekologisk, miljö" />
+    <meta name="keywords" content="eko, hållbarhet, ekologisk, miljö" />
 
     <meta name="author" content="EkoHero" />
     <meta name="copyright" content="EkoHero" />
@@ -22,9 +22,9 @@
 
     <!-- for Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:title" content="EkoHero" />
+    <meta name="twitter:description" content="Bli en EkoHero, Gå istället" />
+    <meta name="twitter:image" content="" /> <!-- TODO -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/css/ligature-symbols.css" rel="stylesheet">
     <link href="resources/css/font-awesome.css" rel="stylesheet">
