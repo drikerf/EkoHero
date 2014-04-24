@@ -47,14 +47,6 @@
     </script>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -120,9 +112,9 @@
                                 <td></td>
                             </tr>
                         </table>
-                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
-                        <i class="fa fa-facebook"></i> Dela på Facebook
-                        </div>
+                        <button class="btn btn-lg btn-block btn-social btn-facebook">
+                            <i class="fa fa-facebook"></i> Dela på Facebook
+                        </button>
                         <button
                         class="btn btn-lg btn-block btn-social btn-twitter">
                         <i class="fa fa-twitter"></i> Dela på Twitter
@@ -135,8 +127,5 @@
             </div>
         </div>
     </div>
-    <script>
-
-    </script>
 </body>
 </html>
