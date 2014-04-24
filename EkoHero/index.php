@@ -123,15 +123,10 @@
                         <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
                         <i class="fa fa-facebook"></i> Dela på Facebook
                         </div>
-                        <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
-                        class="btn btn-lg btn-block btn-social btn-twitter" data-size="large" data-url="http://www.ekohero.se" data-text="Jag är en Ekohero, Bli en du med: ">
+                        <button
+                        class="btn btn-lg btn-block btn-social btn-twitter">
                         <i class="fa fa-twitter"></i> Dela på Twitter
-                        #EkoHero</a>
-                        <script>
-                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-                            fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                        </script>
+                        #EkoHero</button>
                     </div>
                 </div>
                 <!-- End result view -->
@@ -140,5 +135,8 @@
             </div>
         </div>
     </div>
+    <script>
+
+    </script>
 </body>
 </html>
