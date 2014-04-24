@@ -41,6 +41,9 @@ $(function() {
                 var CO2_SUFFIX = 'CO2';
                 // Iterate modes.
                 $.each(data, function(key, value) {
+                    if (key == 'status') {
+                        return;
+                    }
 			        console.log(key);
                     console.log(value['googlelink']);
                     var idCO2 = '#' + key + CO2_SUFFIX;
@@ -48,7 +51,8 @@ $(function() {
                     // Icon.
                     var icon = '<span class="ls-icon-large ' + value['icon'] + '"></span>';
                     // Populate CO2.
-                    var dispCO2 = '<h1>' + value['altemission'][0] + '<span class="co2-unit">' + value['altemission'][1] + '</span></h1>';
+                    console.log(value['altemission']); // Broken.
+                    var dispCO2 = '<h1>' + value['altemission']['amount'] + '<span class="co2-unit">' + value['altemission']['unit'] + '</span></h1>';
                     $(idCO2).html(dispCO2);
                     // Map link.
                     var mapLink = '<a class="map-icon" href="' + value['googlelink'] + '" target="_blank"><span class="ls-icon-large ls-icon-map"></span></a>';

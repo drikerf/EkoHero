@@ -96,7 +96,7 @@ function translateTime($time) {
 function unitConvert($co2) {
 	$co2 = intval($co2);
 	return round($co2/1000,2);
-/* DEPRECATED 
+/* DEPRECATED
 	$units=array("ton"=>1000*1000,"kg"=>1000,"g"=>1);
 	foreach($units as $unitName=>$unit) {
 		if($co2 > $unit) {
@@ -149,7 +149,7 @@ function generateJSONresponse($origin,$dest) {
 		//ADD ICON
 		$g_data[0][$key]['icon'] = getIcon($key);
 		//ADD LAT EMISSION
-		$g_fata[0][$key]['altemission'] = randomType($emissions[$key]);
+		$g_data[0][$key]['altemission'] = randomType($emissions[$key]);
 	}
 
 	//ADD STATUS OK
