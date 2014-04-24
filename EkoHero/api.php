@@ -1,4 +1,5 @@
 <?php
+require("carbon.php");
 /*
 EkoHero API v.0.1
 Copyright (c) EkoHero 2014
@@ -147,6 +148,8 @@ function generateJSONresponse($origin,$dest) {
 		$g_data[0][$key]['emission'] = $emissions[$key];
 		//ADD ICON
 		$g_data[0][$key]['icon'] = getIcon($key);
+		//ADD LAT EMISSION
+		$g_fata[0][$key]['altemission'] = randomType($emissions[$key]);
 	}
 
 	//ADD STATUS OK
