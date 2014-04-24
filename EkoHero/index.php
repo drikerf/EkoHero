@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <div class="row">
-                    <div class="col-sm-7 col-sm-offset-2">
+                    <div class="col-sm-9 col-sm-offset-1">
                         <a class="logo" href="/">
                             <h1>
                                 <span class="glyphicon glyphicon-leaf logo-leaf"></span>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="co2" id="walkingCO2">
                         </div>
-                        <table class="table details">
+                        <table class="table details lead">
                             <tr class="current-view" id="driving">
                                 <td></td>
                                 <td></td>
@@ -120,7 +120,7 @@
                                 <td></td>
                             </tr>
                         </table>
-                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true"> 
+                        <div class="fb-like btn btn-lg btn-block btn-social btn-facebook" data-href="http://ekohero.se" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
                         <i class="fa fa-facebook"></i> Dela på Facebook
                         </div>
                         <a href="https://twitter.com/intent/tweet?button_hashtag=EkoHero"
