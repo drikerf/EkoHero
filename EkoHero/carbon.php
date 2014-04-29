@@ -15,13 +15,14 @@ function randomCarbon(){
 	$data = file_get_contents("http://carbon.to/all.json");
 	// Decode the data
 	$data = json_decode($data, true);
-	
 	return $data[randomKey()]['conversion'];
 }
 
 function randomKey(){
 	$keys = array(
 		'apples' => 1,
+		'tomatoes' => 12,
+		'tea' => 8,
 		'carrots' => 7,
 		'rice' => 18,
 		'beers' => 22);
