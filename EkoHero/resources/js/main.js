@@ -49,7 +49,7 @@ $(function() {
                     var dispCO2 = '<h1>' + value['altemission']['amount'] + '<span class="co2-unit">' + value['altemission']['unit'] + '</span></h1>';
                     $(idCO2).html(dispCO2);
                     // Map link.
-                    var mapLink = '<a class="map-icon" href="' + value['googlelink'] + '" target="_blank"><span class="ls-icon-large ls-icon-map"></span></a>';
+                    var mapLink = '<a class="map-icon" href="' + value['googlelink'] + '" target="_blank"><i class="fa fa-lg fa-compass"></i></a>';
                     // Populate details.
                     var mode = id + ' td:nth-child(1)';
                     var dur = id + ' td:nth-child(2)';
