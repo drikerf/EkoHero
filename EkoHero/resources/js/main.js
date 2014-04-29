@@ -27,7 +27,13 @@ $(function() {
             data = {origin: originCords, dest: destination}
             // Ajax get.
             $.getJSON('api.php', data, function(data) {
-                console.log('api');
+                // If Fail.
+                if (data['status'] != 'OK') {
+                    // Set Error class and enabled search.
+                    $('#go').removeAttr('disabled');
+                    $('#locationSearch').parent().addClass('has-error');
+                    return;
+                } 
                 // Co2 id suffix.
                 var CO2_SUFFIX = 'CO2';
                 // Iterate modes.
@@ -35,14 +41,11 @@ $(function() {
                     if (key == 'status') {
                         return;
                     }
-			        console.log(key);
-                    console.log(value['googlelink']);
                     var idCO2 = '#' + key + CO2_SUFFIX;
                     var id = '#' + key;
                     // Icon.
                     var icon = '<span class="ls-icon-large ' + value['icon'] + '"></span>';
                     // Populate CO2.
-                    console.log(value['altemission']); // Broken.
                     var dispCO2 = '<h1>' + value['altemission']['amount'] + '<span class="co2-unit">' + value['altemission']['unit'] + '</span></h1>';
                     $(idCO2).html(dispCO2);
                     // Map link.
