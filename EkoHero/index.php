@@ -129,7 +129,6 @@
                 <!-- End result view -->
                 <!-- About view -->
                 <div class="content" id="about">
-                    <h1>Om EkoHero</h1>
 EkoHero är en webbapplikation som på ett enkelt och illustrativt sätt uppmuntrar användaren
 att göra klimatsmarta val i vardagen (och på helgen). Applikationen är utvecklad av studenter
 på Datateknikprogrammet på [kay:tee:hay].
@@ -139,7 +138,7 @@ på Datateknikprogrammet på [kay:tee:hay].
 För varje vald resa presenterar reseplaneraren den tid det tar för användaren att förflytta
 sig från aktuella position till vald destination. Tiden för varje resa beräknas med hjälp
 av <a>Google Maps</a> och varierar beroende på vilket färdmedel användaren väljer. Den tar ingen
-hänsyn till eventuella trafikhinder, naturkatastrofer eller tid att hitta parkering.
+hänsyn till eventuella naturkatastrofer eller tid att hitta parkering.
 
 Reseplaneraren redovisar förutom restid koldioxidutsläpp i antal kilogram per resa. För att
 lättare förstå omfattningen symboliseras utsläppen också med olika livsmedel, så som antal
