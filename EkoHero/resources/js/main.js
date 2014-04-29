@@ -1,5 +1,7 @@
 // Onload.
 $(function() {
+    // Social string.
+    var socialString = 'Jag räddade ';
     //Set random background.
     randomBackground();
     // Initialize autocomplete.
@@ -36,6 +38,8 @@ $(function() {
                 } 
                 // Co2 id suffix.
                 var CO2_SUFFIX = 'CO2';
+                // Set social string.
+                socialString += data['driving']['altemission']['amount'] + ' ' + data['driving']['altemission']['unit'];
                 // Iterate modes.
                 $.each(data, function(key, value) {
                     if (key == 'status') {
@@ -57,7 +61,7 @@ $(function() {
                     var map = id + ' td:nth-child(4)';
                     $(mode).html(icon);
                     $(dur).html(value['duration']);
-                    $(emi).html(value['emission']);
+                    $(emi).html(value['emission'] + ' <span class="co2-unit-small">kg CO2</span>');
                     $(map).html(mapLink);
                 });
                 // Hide start view.
@@ -65,7 +69,6 @@ $(function() {
                 // Show result.
                 $('#result').show();
                 $('#drivingCO2').show();
-                $('').show();
             });
             return false;
         });
@@ -96,12 +99,21 @@ $(function() {
 
     // Twitter popup.
     $('.btn-twitter').on('click', function() {
-        window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=Jag%20%C3%A4r%20en%20EkoHero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
+        //window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=" + socialString + "%20%C3%A4r%20en%20EkoHero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
+        window.open("https://twitter.com/intent/tweet?hashtags=EkoHero%2C&original_referer=http%3A%2F%2Flocalhost%2Fekohero%2F&text=" + socialString + "%20och%20%C3%A4r%20en%20EkoHero%2C%20Bli%20en%20du%20med%3A%20&tw_p=tweetbutton&url=http%3A%2F%2Fwww.ekohero.se", "_blank", "width=500, height=500");
         return false;
     });
     // Facebook popup.
     $('.btn-facebook').on('click', function() {
         window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fekohero.se', '_blank', 'width=500, height=500');
+    });
+
+    // About view.
+    $('#aboutLink').on('click', function() {
+        // Hide content.
+        $('.content').hide();
+        // Show about.
+        $('#about').show();
     });
 });
 

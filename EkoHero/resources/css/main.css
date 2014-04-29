@@ -66,6 +66,12 @@ body {
 .co2-unit {
     font-size: 18px;
     color: #fff;
+    display: block;
+}
+
+/* kgCO2 small. */
+.co2-unit-small {
+    font-size: 12px;
 }
 
 /* Green CO2. */
@@ -90,6 +96,11 @@ body {
 .map-icon:hover {
     color: #fff;
     text-decoration: none;
+}
+
+/* About view. */
+#about {
+    display: none;
 }
 
 

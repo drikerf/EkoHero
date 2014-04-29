@@ -127,8 +127,13 @@
                     </div>
                 </div>
                 <!-- End result view -->
+                <!-- About view -->
+                <div class="content" id="about">
+                    About
+                </div>
+                <!-- End about view. -->
                 <hr>
-                <span class="glyphicon glyphicon-heart"></span> 2014 EkoHero
+                <span class="glyphicon glyphicon-heart"></span> 2014 EkoHero - <a href="#" id="aboutLink">Om</a>
             </div>
         </div>
     </div>
