@@ -129,7 +129,33 @@
                 <!-- End result view -->
                 <!-- About view -->
                 <div class="content" id="about">
-                    About
+                    <h1>Om EkoHero</h1>
+EkoHero är en webbapplikation som på ett enkelt och illustrativt sätt uppmuntrar användaren
+att göra klimatsmarta val i vardagen (och på helgen). Applikationen är utvecklad av studenter
+på Datateknikprogrammet på [kay:tee:hay].
+
+
+<h2>Vad mäter reseplaneraren?</h2>
+För varje vald resa presenterar reseplaneraren den tid det tar för användaren att förflytta
+sig från aktuella position till vald destination. Tiden för varje resa beräknas med hjälp
+av <a>Google Maps</a> och varierar beroende på vilket färdmedel användaren väljer. Den tar ingen
+hänsyn till eventuella trafikhinder, naturkatastrofer eller tid att hitta parkering.
+
+Reseplaneraren redovisar förutom restid koldioxidutsläpp i antal kilogram per resa. För att
+lättare förstå omfattningen symboliseras utsläppen också med olika livsmedel, så som antal
+morötter eller portioner ris. Utsläppen från livsmedlena beräknas med hjälp av <a>Carbon.to</a>
+och räknar energitillförseln i MJ (Megajoule) under hela livscykeln och översätter dem till
+koldioxidutsläpp.
+
+För varje resa kan användaren också välja att få upp en anpassad karta över den aktuella resan
+genom att klicka på kompass-ikonen längst till höger.
+
+
+<h2>Dela dina hjältedåd</h2>
+När du knappat in din destination och blivit en EkoHero kan du dela ditt hjältedåd på Facebook
+och Twitter. När du klickar på någon av dela-knapparna dyker en förinställd text upp som presenterar
+din utsläppsbesparing i form av olika livsmedel. Du kan låta denna text stå kvar eller modifiera den
+om du så vill.
                 </div>
                 <!-- End about view. -->
                 <hr>
