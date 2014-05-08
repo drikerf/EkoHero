@@ -135,22 +135,22 @@ EkoHero är en reseplanerare som på ett enkelt och illustrativt sätt uppmuntra
 </p>
 
 <p>
-<strong>Vad mäter reseplaneraren?</strong>
+<h4>Vad mäter reseplaneraren?</h4>
 För varje vald resa presenterar reseplaneraren den tid det tar för användaren att förflytta sig från aktuella position till vald destination. Tiden för varje resa beräknas med hjälp av <a href="https://www.google.com/maps">Google Maps</a> och varierar beroende på vilket färdmedel användaren väljer. Den tar ingen hänsyn till eventuella trafikhinder, naturkatastrofer eller tid att hitta parkering. Reseplaneraren redovisar förutom restid koldioxidutsläpp i antal kilogram per resa. För att lättare förstå omfattningen symboliseras utsläppen också med olika livsmedel, så som antal morötter eller portioner ris. Utsläppen från livsmedlena beräknas med hjälp av <a href="http://carbon.to" target="blank">Carbon.to</a> och räknar energitillförseln i MJ (Megajoule) under hela livscykeln och översätter dem till koldioxidutsläpp. För varje resa kan användaren också välja att få upp en anpassad karta över den aktuella resan geno,m att klicka på kompass-ikonen längst till höger.
 </p>
 
 <p>
-<strong>Dela dina hjältedåd</strong>
+<h4>Dela dina hjältedåd</h4>
 När du knappat in din destination och blivit en EkoHero kan du dela ditt hjältedåd på Facebook och Twitter. När du klickar på någon av dela-knapparna dyker en förinställd text upp som presenterar din utsläppsbesparing i form av olika livsmedel. Du kan låta denna text stå kvar eller modifiera den om du så vill.
 </p>
 
 <p>
-<strong>Hur kan EkoHero bidra till att främja ett hållbart vardagsliv för stadsbor?</strong>
+<h4>Hur kan EkoHero bidra till att främja ett hållbart vardagsliv för stadsbor?</h4>
 EkoHero kan användas för att främja ett hållbart vardagsliv för stadsbor genom att på ett enkelt och illustrativt sätt uppmuntra användare att göra klimatsmarta val i vardagen. Genom att öka medvetenheten hos människor kan EkoHero hjälpa dem att fatta kloka beslut ur miljösynpunkt. Trafikläget i Stockholm har under de senaste åren försämrats och det tar idag ofta längre tid att ta bilen än att åka kollektivt eller cykla. I Stockholm finns idag en utbyggd och relativt bra fungerande kollektivtrafik, men det finns också stora möjligheter att gå och cykla i hela Stor Stockholm. EkoHero visualiserar hur stora utsläppen är på ett sätt som gör det lätt för den oinsatte att sätta mängden koldioxidutsläpp i ett perspektiv, och även tidsskillnaderna mellan olika färdmedel. Med EkoHero så är det helt enkelt lättare för människor att fatta kloka beslut och bli EkoHjältar. De kan sedan dela med sig av sina hjältedåd och uppmana andra att göra samma sak. 
 </p>
 
 <p>
-<strong>Hur stor bedömer vi att nyttan är?</strong>
+<h4>Hur stor bedömer vi att nyttan är?</h4>
 EkoHero kan inte själv rädda planeten men vi kan genom ökad medvetenhet få människor att ändra sina vanor och det är just vanorna som behöver ändras för att vi ska kunna uppnå  en hållbar utveckling. Om bara ett fåtal personer ändrar sina vanor och börjar cykla eller gå regelbundna sträckor, eller bara väljer att gå en solig vårdag har vi tagit ett stort steg mot en hållbar utveckling För den analyserande användaren kan jämförelserna mellan koldioxidutsläpp och livsmedel även medföra nya insikter om människans val gällande miljöpåverkan. Dessa nya insikter kan få en att börja titta på andra vanor och val i vardagen, såsom inköp av ekologiska livsmedel, minska mängden matsvinn och elanvändning.
 
 I dag har sociala medier stor inverkan på människors livsstil och möjligheten att dela sina hjältedåd på Facebook och Twitter underlättar för andra människor att göra klimatsmarta val och på så sätt öka nyttan. Just Facebook och Twitter är två medier för att visa sig duktig och när man ser andra personers smarta val i vardagen och på helgen så triggas man själv till att vara lika duktig, om inte bättre. Givetvis kan man även använda hashtagen #EkoHero på andra sociala medier som till exempel Instagram.
